@@ -9,13 +9,22 @@ simple mail-sending service, http-api, written in golang
 
 ## usage
 ```
-    # install mailserver
+    	# deploy
 	git clone git@github.com:niean/mailsender.git && cd mailsender
+	./control build # get tycs-mailsend
 	mv cfg.example.json cfg.json //then change cfg.json as needed
+	
+	# start
 	./control start
+	
+	...
+	
+	# stop
+	./control stop
+	# log
 	./control tail
 
-	# test, assuming http server listens on "tycloudstart.com:1986"
+	# test, send one mail to tycloudstart.com:1986
 	curl -X POST -d "tos=nieanan@xiaomi.com;subject=ur subject;content=ur content;user=from_user_name" "tycloudstart.com:1986/mail/sender"
 
     # http-api
