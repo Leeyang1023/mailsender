@@ -9,7 +9,7 @@ simple mail-sending service, http-api, written in golang
 
 ## usage
 ```
-    	# deploy
+    # deploy
 	git clone git@github.com:niean/mailsender.git && cd mailsender
 	./control build # get tycs-mailsend
 	mv cfg.example.json cfg.json //then change cfg.json as needed
